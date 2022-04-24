@@ -1,2 +1,1 @@
-# cell-life-cycle-vae
-Construct a variational autoencoder to learn representations on cell images.
+# cell-life-cycle-detection
