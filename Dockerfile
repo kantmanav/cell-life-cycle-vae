@@ -11,11 +11,11 @@ RUN apt-get update && apt-get install -y git && apt-get install -y graphviz && r
 WORKDIR /notebooks
 
 # Copy the required setup files and install the deepcell-tf dependencies
-COPY setup.py README.md requirements.txt /opt/cell-life-cycle-detection/
+COPY setup.py README.md requirements.txt /opt/cell-life-cycle-vae/
 
 # Prevent reinstallation of tensorflow and install all other requirements.
-RUN sed -i "/tensorflow>/d" /opt/cell-life-cycle-detection/requirements.txt && \
-    pip install --no-cache-dir -r /opt/cell-life-cycle-detection/requirements.txt
+RUN sed -i "/tensorflow>/d" /opt/cell-life-cycle-vae/requirements.txt && \
+    pip install --no-cache-dir -r /opt/cell-life-cycle-vae/requirements.txt
 
 # Copy over deepcell notebooks
 COPY notebooks/ /notebooks/
