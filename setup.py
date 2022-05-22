@@ -66,8 +66,8 @@ setup(
         'tensorflow~=2.5.0',
         'tensorflow-addons>=0.13.0',
         'jupyter>=1.0.0,<2',
-        'git+https://github.com/vanvalenlab/data-registry',
         'git+https://github.com/vanvalenlab/deepcell-tf.git@graph_tracking',
+        'git+https://github.com/vanvalenlab/data-registry',
         'opencv-python-headless<5',
         'deepcell-tracking>=0.4.0',
         'deepcell-toolbox>0.10.0'
