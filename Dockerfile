@@ -1,9 +1,9 @@
-# Use tensorflow/tensorflow as the base image
+# Use vanvalenlab/deepcell-tf as the base image
 # Change the build arg to edit the tensorflow version.
 # Only supporting python3.
-ARG TF_VERSION=2.5.0-gpu
+ARG DOCKER_TAG=0.12.0-gpu
 
-FROM tensorflow/tensorflow:${TF_VERSION}
+FROM vanvalenlab/deepcell-tf:${DOCKER_TAG}
 
 # System maintenance
 RUN apt-get update && apt-get install -y git && apt-get install -y graphviz && rm -rf /var/lib/apt/lists/* && /usr/bin/python3 -m pip install --no-cache-dir --upgrade pip
@@ -14,8 +14,7 @@ WORKDIR /notebooks
 COPY setup.py README.md requirements.txt /opt/cell-life-cycle-vae/
 
 # Prevent reinstallation of tensorflow and install all other requirements.
-RUN sed -i "/tensorflow>/d" /opt/cell-life-cycle-vae/requirements.txt && \
-    pip install --no-cache-dir -r /opt/cell-life-cycle-vae/requirements.txt
+RUN pip install --no-cache-dir -r /opt/cell-life-cycle-vae/requirements.txt
 
 # Copy over deepcell notebooks
 COPY notebooks/ /notebooks/
