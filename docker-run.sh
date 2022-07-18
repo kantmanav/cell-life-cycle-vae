@@ -1,5 +1,5 @@
 docker run -it \
---gpus "device=1" \
+--gpus "device=2" \
 -p 94:8888 \
 -v $PWD:/cell-life-cycle-vae \
 -v /deepcell_data/users/manav:/data \
