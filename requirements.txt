@@ -4,10 +4,10 @@ dvc[all]>2,<2.1
 # scikit-image>=0.14.5
 # scikit-learn>=0.20.4
 seaborn>=0.11.0
-# tensorflow~=2.5.0
+tensorflow==2.9.1
 # tensorflow-addons>=0.13.0
-tensorflow-probability==0.16.0
+tensorflow-probability==0.17.0
 # jupyter>=1.0.0,<2
-deepcell~=0.12.0
+deepcell~=0.12.2
 # deepcell-tracking>=0.4.0
 # deepcell-toolbox>0.10.0
