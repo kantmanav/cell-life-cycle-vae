@@ -1,3 +1,5 @@
+# tf import proto3 compatibility
+protobuf~=3.19.4
 dvc[all]>2,<2.1
 # numpy>=1.16.6,<1.20
 # scipy>=1.2.3,<2
